@@ -5,7 +5,9 @@ gem 'rails', '4.0.2'
 #gem 'rails', '3.2.14'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development do
+  gem 'sqlite3'
+end
 #group :development do
 #	gem 'sqlite3', '1.3.5'
 #end
@@ -20,7 +22,7 @@ gem 'sass-rails', '~> 4.0.0'
 #end
 
 # Use Uglifier as compressor for JavaScript assets
-#gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 #gem 'coffee-rails', '~> 4.0.0'
@@ -35,8 +37,12 @@ group :production do
   gem 'pg', '0.12.2'
 end
 
+# http://d.hatena.ne.jp/tetsuyai/20110920/1316487020
+gem 'execjs'
+gem 'therubyracer'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-#gem 'turbolinks'
+gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 #gem 'jbuilder', '~> 1.2'
